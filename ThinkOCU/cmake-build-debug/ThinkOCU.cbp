@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/liz/18FA-FunRobo/ThinkOCU/Serial.cpp">
+			<Option target="ThinkOCU"/>
+		</Unit>
+		<Unit filename="/home/liz/18FA-FunRobo/ThinkOCU/SerialClass.h">
+			<Option target="ThinkOCU"/>
+		</Unit>
 		<Unit filename="/home/liz/18FA-FunRobo/ThinkOCU/main.cpp">
 			<Option target="ThinkOCU"/>
 		</Unit>

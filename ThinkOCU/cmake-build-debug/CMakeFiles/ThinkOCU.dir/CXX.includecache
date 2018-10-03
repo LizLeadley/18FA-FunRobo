@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/liz/18FA-FunRobo/ThinkOCU/Serial.cpp
+SerialClass.h
+/home/liz/18FA-FunRobo/ThinkOCU/SerialClass.h
+
+/home/liz/18FA-FunRobo/ThinkOCU/SerialClass.h
+stdio.h
+-
+stdlib.h
+-
+
 /home/liz/18FA-FunRobo/ThinkOCU/main.cpp
 iostream
 -

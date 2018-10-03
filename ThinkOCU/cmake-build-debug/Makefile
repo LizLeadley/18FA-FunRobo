@@ -123,6 +123,33 @@ ThinkOCU/fast:
 	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/build
 .PHONY : ThinkOCU/fast
 
+Serial.o: Serial.cpp.o
+
+.PHONY : Serial.o
+
+# target to build an object file
+Serial.cpp.o:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.o
+.PHONY : Serial.cpp.o
+
+Serial.i: Serial.cpp.i
+
+.PHONY : Serial.i
+
+# target to preprocess a source file
+Serial.cpp.i:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.i
+.PHONY : Serial.cpp.i
+
+Serial.s: Serial.cpp.s
+
+.PHONY : Serial.s
+
+# target to generate assembly for a file
+Serial.cpp.s:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.s
+.PHONY : Serial.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ThinkOCU"
+	@echo "... Serial.o"
+	@echo "... Serial.i"
+	@echo "... Serial.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

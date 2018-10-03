@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ThinkOCU.dir/main.cpp.o"
+  "CMakeFiles/ThinkOCU.dir/Serial.cpp.o"
   "ThinkOCU.pdb"
   "ThinkOCU"
 )

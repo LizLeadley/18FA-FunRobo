@@ -10,7 +10,6 @@
 
 #define ARDUINO_WAIT_TIME 2000
 
-#include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
 

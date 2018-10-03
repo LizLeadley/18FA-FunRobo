@@ -12,24 +12,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6083f99b-acf0-40e8-b5e0-27d34c25c6c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Serial.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SerialClass.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../XBee_Experiment/SerialClass.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LabThinkActArduinoCode/LabThinkActArduinoCode.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../LabThinkActArduinoCode/LabThinkActArduinoCode.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerialClass.h" beforeDir="false" afterPath="$PROJECT_DIR$/SerialClass.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ThinkOCU.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ThinkOCU.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ThinkOCU.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../XBee_Experiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/XBee_Experiment.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/cmake-build-debug/XBee_Experiment.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XBee_Experiment/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../XBee_Experiment/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,31 +41,32 @@
     <session id="-170761075">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="1" />
-          <entry key="h" value="1" />
+          <entry key="cpp" value="2" />
+          <entry key="h" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="2" />
+          <entry key="ObjectiveC" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="539" />
           <entry key="h" value="3" />
-          <entry key="txt" value="12" />
+          <entry key="txt" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="12" />
+          <entry key="CMakeLists.txt" value="18" />
           <entry key="ObjectiveC" value="542" />
         </counts>
       </usages-collector>
@@ -79,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -87,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="157" column="64" selection-start-line="157" selection-start-column="64" selection-end-line="157" selection-end-column="64" />
+            <state relative-caret-position="126">
+              <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -101,7 +100,12 @@
       <find>getInput(</find>
       <find>getInput</find>
       <find>command</find>
+      <find>Real-time</find>
+      <find>windows</find>
     </findStrings>
+    <replaceStrings>
+      <replace>getInput</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -109,10 +113,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SerialClass.h" />
         <option value="$PROJECT_DIR$/Serial.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/SerialClass.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -192,16 +196,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538600286078</updated>
-      <workItem from="1538600288546" duration="4679000" />
+      <workItem from="1538600288546" duration="6318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4679000" />
+    <option name="totallyTimeSpent" value="6318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="929" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12990603" />
@@ -209,12 +212,12 @@
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32916147" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32916147" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31789738" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31789738" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -232,31 +235,34 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Serial.cpp">
+    <entry file="file://$PROJECT_DIR$/SerialClass.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#199#217#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SerialClass.h">
+    <entry file="file://$PROJECT_DIR$/Serial.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="1020">
+          <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="157" column="64" selection-start-line="157" selection-start-column="64" selection-end-line="157" selection-end-column="64" />
+        <state relative-caret-position="126">
+          <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
         </state>
       </provider>
     </entry>
