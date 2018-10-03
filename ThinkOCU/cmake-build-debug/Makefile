@@ -48,10 +48,10 @@ RM = /snap/clion/39/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/XBee_Experiment
+CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/ThinkOCU
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug
+CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named XBee_Experiment
+# Target rules for targets named ThinkOCU
 
 # Build rule for target.
-XBee_Experiment: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 XBee_Experiment
-.PHONY : XBee_Experiment
+ThinkOCU: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ThinkOCU
+.PHONY : ThinkOCU
 
 # fast build rule for target.
-XBee_Experiment/fast:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/build
-.PHONY : XBee_Experiment/fast
-
-Serial.o: Serial.cpp.o
-
-.PHONY : Serial.o
-
-# target to build an object file
-Serial.cpp.o:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/Serial.cpp.o
-.PHONY : Serial.cpp.o
-
-Serial.i: Serial.cpp.i
-
-.PHONY : Serial.i
-
-# target to preprocess a source file
-Serial.cpp.i:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/Serial.cpp.i
-.PHONY : Serial.cpp.i
-
-Serial.s: Serial.cpp.s
-
-.PHONY : Serial.s
-
-# target to generate assembly for a file
-Serial.cpp.s:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/Serial.cpp.s
-.PHONY : Serial.cpp.s
+ThinkOCU/fast:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/build
+.PHONY : ThinkOCU/fast
 
 main.o: main.cpp.o
 
@@ -156,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,10 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... XBee_Experiment"
-	@echo "... Serial.o"
-	@echo "... Serial.i"
-	@echo "... Serial.s"
+	@echo "... ThinkOCU"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

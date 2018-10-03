@@ -59,45 +59,45 @@ RM = /snap/clion/39/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/XBee_Experiment
+CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/ThinkOCU
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug
+CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/XBee_Experiment.dir
+# Target rules for target CMakeFiles/ThinkOCU.dir
 
 # All Build rule for target.
-CMakeFiles/XBee_Experiment.dir/all:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/depend
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target XBee_Experiment"
-.PHONY : CMakeFiles/XBee_Experiment.dir/all
+CMakeFiles/ThinkOCU.dir/all:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/depend
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ThinkOCU"
+.PHONY : CMakeFiles/ThinkOCU.dir/all
 
 # Include target in all.
-all: CMakeFiles/XBee_Experiment.dir/all
+all: CMakeFiles/ThinkOCU.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/XBee_Experiment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/XBee_Experiment.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/XBee_Experiment.dir/rule
+CMakeFiles/ThinkOCU.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ThinkOCU.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/ThinkOCU.dir/rule
 
 # Convenience name for target.
-XBee_Experiment: CMakeFiles/XBee_Experiment.dir/rule
+ThinkOCU: CMakeFiles/ThinkOCU.dir/rule
 
-.PHONY : XBee_Experiment
-
-# clean rule for target.
-CMakeFiles/XBee_Experiment.dir/clean:
-	$(MAKE) -f CMakeFiles/XBee_Experiment.dir/build.make CMakeFiles/XBee_Experiment.dir/clean
-.PHONY : CMakeFiles/XBee_Experiment.dir/clean
+.PHONY : ThinkOCU
 
 # clean rule for target.
-clean: CMakeFiles/XBee_Experiment.dir/clean
+CMakeFiles/ThinkOCU.dir/clean:
+	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/clean
+.PHONY : CMakeFiles/ThinkOCU.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ThinkOCU.dir/clean
 
 .PHONY : clean
 

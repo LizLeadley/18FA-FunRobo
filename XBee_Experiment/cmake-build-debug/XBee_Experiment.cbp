@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/liz/18FA-FunRobo/XBee_Experiment/Serial.cpp">
+			<Option target="XBee_Experiment"/>
+		</Unit>
+		<Unit filename="/home/liz/18FA-FunRobo/XBee_Experiment/SerialClass.h">
+			<Option target="XBee_Experiment"/>
+		</Unit>
 		<Unit filename="/home/liz/18FA-FunRobo/XBee_Experiment/main.cpp">
 			<Option target="XBee_Experiment"/>
 		</Unit>
