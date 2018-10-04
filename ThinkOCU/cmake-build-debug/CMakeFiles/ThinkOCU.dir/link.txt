@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/ThinkOCU.dir/main.cpp.o CMakeFiles/ThinkOCU.dir/Serial.cpp.o  -o ThinkOCU 
+/usr/bin/c++  -g   CMakeFiles/ThinkOCU.dir/main.cpp.o  -o ThinkOCU 

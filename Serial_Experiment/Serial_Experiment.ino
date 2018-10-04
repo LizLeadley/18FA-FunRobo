@@ -17,12 +17,13 @@
  
  
 char incomingByte = 0;   // for incoming serial data
-int led = 11;
 int bright;
-void
-setup()
+
+
+void setup()
 {
   Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
+  pinMode(LED_BUILTIN, OUTPUT);
 
 }
 
@@ -36,24 +37,29 @@ loop()
       // read the incoming byte:
       incomingByte = Serial.read();
 
-      switch (incomingByte)
-        {
-      case '1':
-        bright = 10;
-        break;
-      case '2':
-        bright = 50;
-        break;
-      case '3':
-        bright = 255;
-        break;
-
-      default:
-        bright = 0;
-        break;
-        }
-
-      analogWrite(led, bright);
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(incomingByte*500);
+      digitalWrite(LED_BUILTIN, LOW);
+//      delay(incomingByte*500);
+//
+//      switch (incomingByte)
+//        {
+//      case '1':
+//          digitalWrite(LED_BUILTIN, HIGH);
+//          delay(1000);
+//          digitalWrite(LED_BUILTIN, LOW);
+//          delay(1000);   
+//      case '2':
+//        bright = 50;
+//        break;
+//      case '3':
+//        bright = 255;
+//        break;
+//
+//      default:
+//        bright = 0;
+//        break;
+//        }
 
       Serial.println(incomingByte);
     }

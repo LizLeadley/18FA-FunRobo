@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/XBee_Experiment.dir/main.cpp.o"
-  "CMakeFiles/XBee_Experiment.dir/Serial.cpp.o"
   "XBee_Experiment.pdb"
   "XBee_Experiment"
 )

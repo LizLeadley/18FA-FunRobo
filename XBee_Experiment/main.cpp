@@ -92,37 +92,37 @@
 
 //---------------------------------------Testing straightup Serial-------------------------------
 
+#include <cstdio>
+#include <iostream>
 #include <stdio.h>
-#include <stdlib>
-#include <tchar.h>
-#include "SerialClass.h"	// Library described above
-#include <string>
-using namespace std
+#include <unistd.h>
+using namespace std;
 
-// application reads from the specified serial port and reports the collected data
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
-    printf("Welcome to the serial test app!\n\n");
+    FILE *file;
+//int file;
+    //Opening device file
 
-    Serial* SP = new Serial("\\\\.\\COM10");    // adjust as needed
+    char getnum;
 
-    if (SP->IsConnected())
-        printf("We're connected");
-
-    char incomingData[256] = "";			// don't forget to pre-allocate memory
-    //printf("%s\n",incomingData);
-    int dataLength = 255;
-    int readResult = 0;
-
-    while(SP->IsConnected())
+    while (1)
     {
-        readResult = SP->ReadData(incomingData,dataLength);
-        // printf("Bytes read: (0 means no data available) %i\n",readResult);
-        incomingData[readResult] = 0;
+        file = fopen("/dev/ttyACM0", "w");
+        cout << "Input key, q to quit >>" << endl;
+        cin >> getnum;
+//        if (getnum == "q")
+//        {
+//            break;
+//        }
+//        else
+//        {
+//            write(file, "%d", getnum);
+            fprintf(file, "%d", getnum); //Writing to the file
 
-        printf("%s",incomingData);
-
-        Sleep(500);
+            fclose(file);
+//        }
     }
-    return 0;
+
 }
+

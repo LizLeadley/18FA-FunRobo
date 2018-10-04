@@ -1,4 +1,4 @@
-# Install script for directory: /home/liz/18FA-FunRobo/XBee_Experiment
+# Install script for directory: /home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

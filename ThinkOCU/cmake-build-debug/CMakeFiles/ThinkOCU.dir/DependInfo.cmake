@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liz/18FA-FunRobo/ThinkOCU/Serial.cpp" "/home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/ThinkOCU.dir/Serial.cpp.o"
-  "/home/liz/18FA-FunRobo/ThinkOCU/main.cpp" "/home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/ThinkOCU.dir/main.cpp.o"
+  "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/main.cpp" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/ThinkOCU.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
