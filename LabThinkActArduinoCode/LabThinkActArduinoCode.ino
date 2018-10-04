@@ -20,7 +20,6 @@
 
 //Sets up Simple Serial communication
 SoftwareSerial actSerial(10,11); //connects act arduino to think arduino using pins 10 & 11
-String data = "";
 
 Servo rudder;
 Servo table;
@@ -37,39 +36,49 @@ int sign = 0;
 int propSpeed = 0;
 int tableSpeed = 0;
 
+String data = "";
+
 void setup() 
 {
   // put your setup code here, to run once:
   actSerial.begin(9600); //sets baud rate for act to 9600
   //actSerial has same name in think and act arduinos
   //not attach the servos and motors. the motors act like continuous rotation servos
+  Serial.begin(9600);
+  Serial.setTimeout(20);
   rudder.attach(rudderPin);
   table.attach(tablePin);
   prop.attach(propPin);
+
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);  
+
 }
 
 ////////////////////////MAIN LOOP////////////////////////////
 
 void loop() {
-
-  if (actSerial.available() > 0) //if any data sent through connection
+  if (Serial.available() > 0) //if any data sent through connection
     {
-      char c = actSerial.read(); //read and return data sent
-      while(c != 'n') //for each character in 
-      {
-        data.concat(c); //make a string of the six characters in each packet
-      }
+      Serial.println("Recieving data");
+      data = Serial.readString();
+      Serial.println(data);
     }
 
     //parse the data from serial into an angle and a speed
     angle = parseAngle(data);
     propSpeed = parseSpeed(data);
 
+    Serial.println(angle);
+    //Serial.println(propSpeed);
+
     //set the motors and servos to match that speed and angle
+    //then set the color of the LED
     setActuators(angle, propSpeed);
+    setLight(angle);
 
     //reset data to nothing
-    data = "";
 }
 
 //////////////////////END OF MAIN LOOP///////////////////////////////////
@@ -80,7 +89,7 @@ void setActuators(int angle, int propSpeed)
 {
   rudder.write(-angle);//the rudders go to the opposite angle from the
   prop.write(propSpeed);
-  tableSpeed = angle + 90; //this yields a number from 0 10 180, 
+  tableSpeed = angle + 90; //this yields a number from 0 to 180, 
   //which is what the table can take as a speed. A negative angle will 
   //make the motor turn backwards, and vice versa.
   //we may have to divide this to scale it down so the table doesn't 
@@ -91,32 +100,51 @@ void setActuators(int angle, int propSpeed)
 int parseAngle(String data)
 {
   
-  String signStr = data.substring(0,0); //the first character is the sign of the angle
-  String angleStr = data.substring(1,2); //the second and third are the heading angle
+  String signStr = data.substring(0,1); //the first character is the sign of the angle
+  String angleStr = data.substring(1,3); //the second and third are the heading angle
   
   //make all those substrings of the input into integers so they can be used
   
   sign = signStr.toInt();
   angle = angleStr.toInt();
-
-  if (!sign) //if the sign character is 0, the angle should be negative
-    {
-      angle = -angle; //make the angle negative
-    }
+  
     if (angle > 90)
     {
       angle = 90; //the servos won't be able to do anything bigger than this
       //the angle 90 may need to change later to be smaller.
     }
+
+    if (!sign) //if the sign character is 0, the angle should be negative
+    {
+      angle = -angle; //make the angle negative
+    }
+    
   return angle;
 }
 
 int parseSpeed(String data)
 {
-  String speedStr = data.substring(3,5); //the last three are the speed from 00 to 99
+  String speedStr = data.substring(3); //the last three are the speed from 00 to 99
 
   //make the substring of the input into an integer so it can be used
   propSpeed = speedStr.toInt();
 
   return propSpeed;
+}
+
+void setLight(int angle)
+{
+  //first turn all the lights off
+  analogWrite(redPin,0);
+  analogWrite(greenPin,0);
+  analogWrite(bluePin,0);
+  if(angle > 0)
+  {
+    analogWrite(bluePin,255);
+  }
+  else if(angle < 0)
+  {
+    analogWrite(greenPin,255);
+  }
+  //Serial.println("I just set the light");
 }
