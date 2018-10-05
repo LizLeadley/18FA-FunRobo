@@ -19,7 +19,7 @@
 //////////////////////////SETUP///////////////////////////
 
 //Sets up Simple Serial communication
-SoftwareSerial actSerial(10,11); //connects act arduino to think arduino using pins 10 & 11
+SoftwareSerial senseSerial(10,11); //connects act arduino to think arduino using pins 10 & 11
 
 Servo rudder;
 Servo table;
@@ -41,11 +41,11 @@ String data = "";
 void setup() 
 {
   // put your setup code here, to run once:
-  actSerial.begin(9600); //sets baud rate for act to 9600
+  senseSerial.begin(9600); //sets baud rate for act to 9600
   //actSerial has same name in think and act arduinos
   //not attach the servos and motors. the motors act like continuous rotation servos
   Serial.begin(9600);
-  Serial.setTimeout(20);
+  //Serial.setTimeout(20);
   rudder.attach(rudderPin);
   table.attach(tablePin);
   prop.attach(propPin);
@@ -59,11 +59,11 @@ void setup()
 ////////////////////////MAIN LOOP////////////////////////////
 
 void loop() {
-  if (Serial.available() > 0) //if any data sent through connection
+  if (senseSerial.available()>0) //if any data sent through connection
     {
-      Serial.println("Recieving data");
-      data = Serial.readString();
-      Serial.println(data);
+      
+      
+      Serial.println(senseSerial.read());
     }
 
     //parse the data from serial into an angle and a speed
