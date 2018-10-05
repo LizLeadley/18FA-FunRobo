@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/main.cpp
+cstdio
+-
+iostream
+-
+stdio.h
+-
+unistd.h
+-
+

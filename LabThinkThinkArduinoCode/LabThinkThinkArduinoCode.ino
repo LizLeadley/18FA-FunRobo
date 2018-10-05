@@ -29,6 +29,10 @@ SoftwareSerial senseSerial(12,13);  //connects arduino to sense arduino using pi
 ////////////////////////////////
 //Global Variables
 ///////////////////////////////
+String data = "";   //initializes data string
+String propSpeed = "135"; //half speed forward
+String angle = "000"
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -40,94 +44,111 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  ////////////////////////////////////////////////////////////////////////////
-  //Basic softSerial Loop Code Following
-  ////////////////////////////////////////////////////////////////////////////
-  if (actSerial.isListening()) //tests if port is actively listening
-  {
-   Serial.println("Act Arduino is listening!");
-  }
-  if (senseSerial.isListening()) //tests if port is actively listening
-  {
-   Serial.println("Sense Arduino is listening!");
-  }
-  
-  if (actSerial.available()>0) //returns # of bytes/characters 
-  //available for reading from actSerial port. this is data that 
-  //arrived and was stored in the serial recieve buffer.
-  {
-    actSerial.read(); //reads data from act arduino and returns character read
-    //Only one SoftwareSerial instance can receive incoming data at a time 
-  }
-  if (senseSerial.available()>0)
-  {
-    senseSerial.read();
-  }
-  
-  Serial.println("Message to Computer"); //Prints data to serial port
-  actSerial.println("Message to Act Arduino"); //Prints data to the transmit pin of the Act software serial port
-  senseSerial.println("Message to Sense Arduino"); //Prints data to the transmit pin of the Sense software serial port
-
-  actSerial.write("hello act");//Prints data to the transmit pin of the software serial port as raw bytes.
-  senseSerial.write("hello sense");//Prints data to the transmit pin of the software serial port as raw bytes.
-  //////////////////////////////////////////////////////////////////////////////////////
-
   //////////////////////////////////////////////////////////////////////////////////////
   //Very Basic Think Code Following
   //////////////////////////////////////////////////////////////////////////////////////
-  //I think Think Arduino will tend to receive from sense and send to act. Both for computer
+  //Think Arduino will receive from sense, decide what to do, then send to act. It will also send updates and recieve commands from comp.
   //TODO: Do we know if the xbee uses the normal serial to communicate or something else------------------------------
   
   //take data from sense arduino (probably active)
-  //Is sense sending pure data, sensor reading keywords, object map, direction, or other? Assuming key words----------
+  //Sense arduino is sending and angle from the pixy, and 5 distances from the IR sensors
   if (senseSerial.available()>0)
   {
-    //we could separate types of senses i.e. if sensors sensed fish, return F.MovementType, and if obstacle return O.MovementType
-    //then say c = senseSerial.read() and if c[index0] = I, do this, if O, do that, etc.
-    SENSED = senseSerial.read();
+    data = "";
+    while (data.length() < 13)
+    {
+      char c = senseSerial.read();//reads c to check if it's n or not
+       while (char c != 'n')  //stops reading c at null character at null character
+       {
+         c = senseSerial.read(); //if c = #, reads each number
+         data = data + c;  //new data str = old data + character c
+         //data.concat(c); //adds each number to string
+       }
+    }
   }
-  
-  //send data to sense arduino   (probably passive)
-  //What data would need to be sent to sensors, initializing data? i.e. start sensing
-  //write() transmits raw data through serial pin, print works same as Serial.print() fn, simply prints data to serial port
-  senseSerial.write();
-  senseSerial.println();
 
-  //take data from act arduino   (probably passive)
-  //What data do we need from act arduino? Confirmation of working?
-  if (actSerial.available()>0)
+  pixy = parsePixy(data);  //returns angle 
+  leftCenterIR = parseLCIR(data);  //returns distance LCIR
+  rightCenterIR = parseRCIR(data);  //returns distance RCIR
+  leftIR = parseLIR(data);   //returns distance LIR
+  rightIR = parseRIR(data);  //returns distance RIR
+  backIR = parseBIR(data);   //returns distance BIR
+  
+  if (leftCenterIR == "000") //if the 3 characters that represent LCIR == "000",LCIR is detecting distance less than 15
   {
-    //if motor moves -> confirm
-    //when rudder moves -> print angle and direction travelled
-    //when table moves -> print heading
-    //what else is important?
+    propSpeed = "090";  //0 speed
+  }
+  if (rightCenterIR == "000")
+  {
+    propSpeed = "090";  //0 speed
+  }
+  if (leftIR == "000")
+  {
+    propSpeed = "090";  //0 speed
+  }
+  if (rightIR == "000")
+  {
+    propSpeed = "090";  //0 speed
+  }
+  if (backIR == "000")
+  {
+    propSpeed = "090";  //0 speed
+  }
+  else
+  {
+    propSpeed = "135";  //half speed forward
   }
   
-  //send data to act arduino     (probably active)
-  if (Move = Forward) 
-  {
-    actSerial.println("Forward")  //act code can the specify what forward equates to in speed / other
-  }
-  if (Move = Backward) 
-  {
-    actSerial.println("Backward")
-  }
-  if (Rudder = Right) 
-  {
-    actSerial.println("Right")  //how to transmit rudder angle?
-  }
-  if (Rudder = Left) 
-  {
-    actSerial.println("Left")  //how do you want data sent? format wise
-  }
-  
+  //send data to act arduino
+  actSerial.print(angle);  //sends angle from pixy cam
+  actSerial.print(propSpeed);  //sends speed to act
+  actSerial.println('n');
+
   //////////////////////////////////////////////////////////////////////////////////////
+
 
   //////////////////////////////////////////////////////////////////////////////////////
   //Functions  //as in functions that aren't in libraries that need to be made//fewer = better
   //////////////////////////////////////////////////////////////////////////////////////
-  //any ideas for needed function
-  //possibly fancy ways of arranging sense data
-  //or gaussian arbiter, that's probably a function or 10
+  String parsePixy(String data)  //if you want to return in change 1st word String to int
+  {
+    //String pixySign = data.substring(0,0);  //first character (0,0) determines if angle is positive or negative
+    String pixyAngle = data.substring(0,2);  //next 2 characters (1,2) determine angle
+    //make strings to integers
+    //sign = pixySign.toInt();//if 0 sign is -, if 1 sign is +
+    //angle = pixyAngle.toInt(); //if you want to return int use this line
+    return angle;
+  }
+  String parseLCIR(String data) //if you want to return in change 1st word String to int
+  {
+    String strLCIR = data.substring(3,4);
+    //LCIR = strLCIR.toInt();//if you want to return int use this line
+    return LCIR;
+  }
+  String parseRCIR(String data)//if you want to return in change 1st word String to int
+  {
+    String strRCIR = data.substring(3,4);
+    //RCIR = strRCIR.toInt(); //if you want to return int use this line
+    return RCIR;
+  }
+  String parseLIR(String data)//if you want to return in change 1st word String to int
+  {
+    String strLIR = data.substring(3,4);
+    //LIR = strLIR.toInt(); //if you want to return int use this line
+    return LIR;
+  }
+  String parseRIR(String data)//if you want to return in change 1st word String to int
+  {
+    String strRIR = data.substring(3,4);
+    //RIR = strRIR.toInt(); //if you want to return int use this line
+    return RIR;
+  }
+  String parseBIR(String data)//if you want to return in change 1st word String to int
+  {
+    String strBIR = data.substring(3,4);
+    //BIR = strBIR.toInt(); //if you want to return int use this line
+    return BIR;
+  }
+
   //////////////////////////////////////////////////////////////////////////////////////
 }
