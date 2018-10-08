@@ -12,24 +12,24 @@
 ///////////////////////////////
 //Libraries
 ///////////////////////////////
-#include <SoftwareSerial.h> //includes software serial library
-#include <SPI.h>            // pixystuff
+#include <SoftwareSerial.h>  //includes software serial library
+#include <SPI.h>             // pixystuff
 #include <Pixy.h>
-#include <math.h>           // math library
+#include <math.h>            // math library
 ///////////////////////////////
 
 //Sets up Simple Serial communication
 SoftwareSerial senseSerial(12, 13);     //connects sense arduino to think arduino using pins 12 & 13
 
 // All the variables we need
-Pixy pixy;      // This is the main Pixy object
-int xValue;     // x value of the cetner of the box, seen by the Pixy Cam
-int offsetDeg;  // position in degrees with 0 degrees = straight
-float ratio;    // value used in the remap function
-String newValue;// return value used for round off function
-String strValue;// string used to make a 3 digit string of the angle 
-String angleStr;// String of the angle to put in the string sent over serial
-String serialStr; // String to send serial data
+Pixy pixy;                     // This is the main Pixy object
+int xValue;                    // x value of the cetner of the box, seen by the Pixy Cam
+int offsetDeg;                 // position in degrees with 0 degrees = straight
+float ratio;                   // value used in the remap function
+String newValue;               // return value used for round off function
+String strValue;               // string used to make a 3 digit string of the angle 
+String angleStr;               // String of the angle to put in the string sent over serial
+String serialStr;              // String to send serial data
 unsigned long previousMillis = 0;
 const int analogPin0 = 0;     // Left
 String left;
@@ -46,7 +46,7 @@ int j = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  senseSerial.begin(9600);               //sets baud rate for sense to 9600
+  senseSerial.begin(19200);               //sets baud rate for sense to 9600
   //senseSerial has same name in think and sense arduinos
   pixy.init();                           // pixy initialization
   Serial.begin(9600);
@@ -86,31 +86,28 @@ void loop() {
   }
   else if (currentMillis - previousMillis > 500)                    // if it hasn't seen a block for a longer time (300 ms), it gives a value (999)
   {
-    offsetDeg = 999;    
+    offsetDeg = 99;    
   }
-  // angleStr = makeString(offsetDeg);
+  angleStr = makeString(offsetDeg);
+  
   // Sharp IR's code
   
   left = roundOff(valToDist(analogRead(analogPin0)));               // reading the analogpin, convert to distance and round off to interval between [15,99]
   right = roundOff(valToDist(analogRead(analogPin1)));
   softLeft = roundOff(valToDist(analogRead(analogPin2)));
-  softRight = roundOff(valToDist(analogRead(analogPin3)));          //###### TODO: back seems to not be working
+  softRight = roundOff(valToDist(analogRead(analogPin3)));          
   back = roundOff(valToDist(analogRead(analogPin4))); 
   
-  serialStr = "000" + left + softLeft + softRight + right + back + 'n';           // Putting together the string to send through serial, 000 for the angle for now
-  Serial.println(serialStr);
+  serialStr =  angleStr + left + softLeft + softRight + right + back;   // Putting together the string to send through serial
+  Serial.println(serialStr);                                        // See in serial what's it sending through
 
   
   
   ////////////////////////////////////////
   //Basic softSerial Code
   ////////////////////////////////////////
-  if (senseSerial.available() > 0) //if any data sent through connection
-  {
-    senseSerial.read(); //read and return data sent
-  }
-  senseSerial.println("Message to Think Arduino");//Prints data to the transmit pin of the Sense software serial port
-  senseSerial.write("hello think"); //Prints data to the transmit pin of the software serial port as raw bytes.
+
+  senseSerial.println(serialStr);          //Prints data to the transmit pin of the Sense software serial port ###Note: This never worked, so maybe there is a better way?
   ////////////////////////////////////////
 
   ////////////////////////////////////////
@@ -132,7 +129,7 @@ void loop() {
 //Functions
 /////////////////////////////////////////////////////
 
-// Remap function between 2 intervals
+// Remap function between 2 intervals  ###Note: Actually there is a built-in function in arduino that also does this for you ('map')
 float remapInterval(float value, float int1_start, float int1_end, float int2_start, float int2_end)
 {
   ratio = (value - int1_start) / (int1_end - int1_start);
@@ -148,7 +145,6 @@ int valToDist(int val)
 // Function rounding of value to [15,99] and make a 2 digit string
 String roundOff(int val)
 {
-  newValue = String(val);
   if (val > 99)
   {
     newValue = "99";
@@ -157,25 +153,30 @@ String roundOff(int val)
   {
     newValue = "00";
   }
+  else
+  {
+    newValue = String(val);
+  }
   return newValue;
 }
 
 // Function making a 3-digit string of the angle value, with the first digit (0,1) = (-,+) respectively
+// ### Note: We first tried to first make a string and check if the first char was "-", which it didn't want to do for some reason. That's why we make a string in both if-statements.
 String makeString(int val)
 {
-  strValue = String(val);
-  if (strValue[0] == "-")
+  if (val < 0)                      // Turns the - into 0
   {
-    strValue[0] = 0;
+    strValue = String(val);
+    strValue.replace('-','0');
   }
-  else
+  else                              // adds a 1 in front of number (if positive)
   {
+    strValue = String(val);
     strValue = "1"+strValue;
   }
-  if (strValue.length() < 3)
+  if (strValue.length() < 3)        // adds zeroes if the number is too short
   {
-    strValue = strValue[0] + "0" + strValue;
+    strValue = strValue.substring(0,1) + "0" + strValue.substring(1);
   }
-
-  
+  return strValue;
 }
