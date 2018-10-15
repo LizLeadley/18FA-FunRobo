@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liz/FunRobo/SenseTwo/VideoDisplay/main.cpp
+stdio.h
+-
+opencv2/opencv.hpp
+-
+iostream
+-
+
