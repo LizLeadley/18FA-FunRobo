@@ -14,15 +14,25 @@ using namespace cv; //we will talk in cv functions.
 
 int main(int argc, char** argv )
 {
-    if ( argc != 2 ) //argc looks to be some sort of control flag?
+  //argc always tracks the number of arguments given when running a c++ program
+  //with arguments (ie from terminal)
+  //argv is the vector of char arguments given, e.g. [./programName, fileName]
+  //for something like this calling a file.
+  //0th index will be the function being called, and the next will be the
+  //additional arguments passed, in this case the video file.
+  //(these can be renamed)
+
+   //If the user passes more arguments than the function name and file name,
+   //print out to them the proper calling syntax
+    if ( argc != 2 )
     {
       //Tells user how function is supposed to be called
-        printf("usage: DisplayImage.out <Image_Path>\n");
-        std::cout << "Use as: OpenCVImageDisplay.out <Image_Path>\n";
+        std::cout << "Call using: OpenCVImageDisplay.out <Image_File_Path>\n";
         return -1;
     }
 
     Mat image; //Creates a matrix called image
+    //Calling argv[1], which is the image file
     image = imread( argv[1], 1 ); //built-in imread funciton populates image object
 
     //in case there's no data in the image, don't display it, and tell us so.

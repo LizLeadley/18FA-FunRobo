@@ -15,11 +15,29 @@
 using namespace cv;
 using namespace std;
 
-
-int main() //call on a file to be displayed
+//call on a file to be displayed
+int main(int argc, char** argv)
 {
+  //argc always tracks the number of arguments given when running a c++ program
+  //with arguments (ie from terminal)
+  //argv is the vector of char arguments given, e.g. [./programName, fileName]
+  //for something like this calling a file.
+  //0th index will be the function being called, and the next will be the
+  //additional arguments passed, in this case the video file.
+  //(these can be renamed)
 
-    VideoCapture cap("Spin.avi"); //Create videocapture object on a file
+   //If the user passes more arguments than the function name and file name,
+   //print out to them the proper calling syntax
+    if ( argc != 2 )
+    {
+      //Tells user how function is supposed to be called
+        cout << "Call with: VideoDisplay <Video_File_Path>\n";
+        return -1;
+    }
+
+
+    // calls argv[1], which is the video file
+    VideoCapture cap(argv[1]); //Create videocapture object on a file
     //to open camera instead of file, pass an integer, i.e. 0 for inbuilt webcam
 
 
