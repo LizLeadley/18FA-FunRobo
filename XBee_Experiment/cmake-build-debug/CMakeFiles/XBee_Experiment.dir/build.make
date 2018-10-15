@@ -43,10 +43,10 @@ RM = /snap/clion/39/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/XBee_Experiment
+CMAKE_SOURCE_DIR = "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/XBee_Experiment.dir/depend.make
@@ -59,43 +59,28 @@ include CMakeFiles/XBee_Experiment.dir/flags.make
 
 CMakeFiles/XBee_Experiment.dir/main.cpp.o: CMakeFiles/XBee_Experiment.dir/flags.make
 CMakeFiles/XBee_Experiment.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/XBee_Experiment.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/XBee_Experiment.dir/main.cpp.o -c /home/liz/18FA-FunRobo/XBee_Experiment/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/XBee_Experiment.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/XBee_Experiment.dir/main.cpp.o -c "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/main.cpp"
 
 CMakeFiles/XBee_Experiment.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/XBee_Experiment.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liz/18FA-FunRobo/XBee_Experiment/main.cpp > CMakeFiles/XBee_Experiment.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/main.cpp" > CMakeFiles/XBee_Experiment.dir/main.cpp.i
 
 CMakeFiles/XBee_Experiment.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/XBee_Experiment.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liz/18FA-FunRobo/XBee_Experiment/main.cpp -o CMakeFiles/XBee_Experiment.dir/main.cpp.s
-
-CMakeFiles/XBee_Experiment.dir/Serial.cpp.o: CMakeFiles/XBee_Experiment.dir/flags.make
-CMakeFiles/XBee_Experiment.dir/Serial.cpp.o: ../Serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/XBee_Experiment.dir/Serial.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/XBee_Experiment.dir/Serial.cpp.o -c /home/liz/18FA-FunRobo/XBee_Experiment/Serial.cpp
-
-CMakeFiles/XBee_Experiment.dir/Serial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/XBee_Experiment.dir/Serial.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liz/18FA-FunRobo/XBee_Experiment/Serial.cpp > CMakeFiles/XBee_Experiment.dir/Serial.cpp.i
-
-CMakeFiles/XBee_Experiment.dir/Serial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/XBee_Experiment.dir/Serial.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liz/18FA-FunRobo/XBee_Experiment/Serial.cpp -o CMakeFiles/XBee_Experiment.dir/Serial.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/main.cpp" -o CMakeFiles/XBee_Experiment.dir/main.cpp.s
 
 # Object files for target XBee_Experiment
 XBee_Experiment_OBJECTS = \
-"CMakeFiles/XBee_Experiment.dir/main.cpp.o" \
-"CMakeFiles/XBee_Experiment.dir/Serial.cpp.o"
+"CMakeFiles/XBee_Experiment.dir/main.cpp.o"
 
 # External object files for target XBee_Experiment
 XBee_Experiment_EXTERNAL_OBJECTS =
 
 XBee_Experiment: CMakeFiles/XBee_Experiment.dir/main.cpp.o
-XBee_Experiment: CMakeFiles/XBee_Experiment.dir/Serial.cpp.o
 XBee_Experiment: CMakeFiles/XBee_Experiment.dir/build.make
 XBee_Experiment: CMakeFiles/XBee_Experiment.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable XBee_Experiment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable XBee_Experiment"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/XBee_Experiment.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +93,6 @@ CMakeFiles/XBee_Experiment.dir/clean:
 .PHONY : CMakeFiles/XBee_Experiment.dir/clean
 
 CMakeFiles/XBee_Experiment.dir/depend:
-	cd /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liz/18FA-FunRobo/XBee_Experiment /home/liz/18FA-FunRobo/XBee_Experiment /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug /home/liz/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/XBee_Experiment/cmake-build-debug/CMakeFiles/XBee_Experiment.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/XBee_Experiment.dir/depend
 

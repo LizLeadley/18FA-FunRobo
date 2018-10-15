@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liz/FunRobo/SenseTwo/OpenCVImageDisplay/main.cpp
+stdio.h
+-
+opencv2/opencv.hpp
+-
+

@@ -48,10 +48,10 @@ RM = /snap/clion/39/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liz/18FA-FunRobo/ThinkOCU
+CMAKE_SOURCE_DIR = "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles" "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liz/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eamon/Desktop/Fun Robo/18FA-FunRobo/ThinkOCU/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -123,33 +123,6 @@ ThinkOCU/fast:
 	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/build
 .PHONY : ThinkOCU/fast
 
-Serial.o: Serial.cpp.o
-
-.PHONY : Serial.o
-
-# target to build an object file
-Serial.cpp.o:
-	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.o
-.PHONY : Serial.cpp.o
-
-Serial.i: Serial.cpp.i
-
-.PHONY : Serial.i
-
-# target to preprocess a source file
-Serial.cpp.i:
-	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.i
-.PHONY : Serial.cpp.i
-
-Serial.s: Serial.cpp.s
-
-.PHONY : Serial.s
-
-# target to generate assembly for a file
-Serial.cpp.s:
-	$(MAKE) -f CMakeFiles/ThinkOCU.dir/build.make CMakeFiles/ThinkOCU.dir/Serial.cpp.s
-.PHONY : Serial.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,9 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ThinkOCU"
-	@echo "... Serial.o"
-	@echo "... Serial.i"
-	@echo "... Serial.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
