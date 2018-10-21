@@ -26,6 +26,7 @@ int main(int argc, char** argv )
    //print out to them the proper calling syntax
     if ( argc != 2 )
     {
+      //If it's called wrong,
       //Tells user how function is supposed to be called
         std::cout << "Call using: OpenCVImageDisplay.out <Image_File_Path>\n";
         return -1;
@@ -47,6 +48,7 @@ int main(int argc, char** argv )
     namedWindow("Display Image", WINDOW_AUTOSIZE );
     //shows an image, named Display Image, and referencing our Image object from earlier
     imshow("Display Image", image);
+    
     //waits x milliseconds before moving on (most common in video loops)
     //zero is an infinite, immediate loop.; this is how to affect slow-mo
     waitKey(0);

@@ -1,3 +1,0 @@
-/home/liz/FunRobo/SenseTwo/OpenCVImageDisplay/CMakeFiles/edit_cache.dir
-/home/liz/FunRobo/SenseTwo/OpenCVImageDisplay/CMakeFiles/rebuild_cache.dir
-/home/liz/FunRobo/SenseTwo/OpenCVImageDisplay/CMakeFiles/OpenCVImageDisplay.dir

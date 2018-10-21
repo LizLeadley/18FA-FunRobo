@@ -1,3 +1,0 @@
-/home/liz/FunRobo/SenseTwo/VideoDisplay/CMakeFiles/edit_cache.dir
-/home/liz/FunRobo/SenseTwo/VideoDisplay/CMakeFiles/rebuild_cache.dir
-/home/liz/FunRobo/SenseTwo/VideoDisplay/CMakeFiles/VideoDisplay.dir
