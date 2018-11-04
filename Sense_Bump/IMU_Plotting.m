@@ -1,11 +1,19 @@
+%% Load, Plot, and Compare csv Datasets from the IMU
+% Two functions included: loadAndPlot, and loadAndCompare. Each has its own
+% section below. Anything that is not double-commented can be ctrl+r
+% uncommented and run (assuming you have matching file names)
+
+% files have to be in same directory as this, otherwise you have to give a
+% full file path. Make sure to 'Change Folder' into where they all live.
+
 %% Load and Plot These things:
 
-% loadAndPlot takes a file name of a csv from BumpToGraph arduino code, and
-% plots each reading across time with labels.
+% % loadAndPlot takes a file name of a csv from BumpToGraph arduino code,
+% % and plots each reading across time with labels.
 
-% loadAndPlot('test.txt')
+loadAndPlot('test.txt')
 
-% %round 1 of testing
+% % Round 1 of testing
 % loadAndPlot('front.txt')
 % loadAndPlot('right.txt')
 % loadAndPlot('back.txt')
@@ -15,16 +23,16 @@
 
 %% Load and Compare things
 
-% loadAndCompare takes a matrix of file names, each in "", such as
-% ["file1.txt", "file2.txt"], of any size (i.e. anywhere from 1 to a
-% jillion files, so long as they are in format)
+% % loadAndCompare takes a matrix of file names, each in "", such as
+% % ["file1.txt", "file2.txt"], of any size (i.e. anywhere from 1 to a
+% % jillion files, so long as they are in format)
 
-% The second argument determines which part of the data is plotted:
-% whichToPlot argument of loadAndCompare uses the following mapping:
-% 1: Time (ms);      2: aX(m/s^2);    3: aY(m/s^2);    4: aZ(m/s^2)
-% 5: Pitch(deg);     6: Roll(deg);    7: Heading(deg)
+% % The second argument determines which part of the data is plotted:
+% % whichToPlot argument of loadAndCompare uses the following mapping:
+% % 1: Time (ms);      2: aX(m/s^2);    3: aY(m/s^2);    4: aZ(m/s^2)
+% % 5: Pitch(deg);     6: Roll(deg);    7: Heading(deg)
 
-loadAndCompare(["right.txt", "right2.txt", "right3.txt"], 2)
+% loadAndCompare(["right.txt", "right2.txt", "right3.txt"], 2)
 % loadAndCompare(["left.txt", "left2.txt", "left3.txt"], 2)
 
 %% I made it a function that takes a file name as input, and plots the csv
